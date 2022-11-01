@@ -42,12 +42,49 @@
     <div id="animate">
       <div class="container"></div>
     </div>
+    <!-------------------------------------Basic Maths------------------- -->
+    <div id="title">
+      <div class="container-fluid p-3 bg-dark mt-2 mb-2">
+        <h1 class="text-white text-center">Basic calculations</h1>
+      </div>
+    </div>
 
-    <div id="card">
+    <div id="card0">
+      <div class="container shadow shadow-lg p-3 bg-light mb-5 mt-2">
+        <h3>Square and cubes</h3>
+        <div class="row p-5">
+          <div class="col col-6">
+            <h4 class="text-center">
+              Square
+              <button class="btn btn-success" onclick="gen1()">Generate</button>
+            </h4>
+            <center></center>
+            <!-- <script> -->
+            <!-- document.write(`<table class="table text-center">`); -->
+            <!-- for (rows = 1; rows <= 100; rows++) { -->
+            <!-- document.write(" <tr> "); -->
+            <!-- for (col = 1; col <= 2; col++) { -->
+            <!-- document.write(" <td > Row number is " + rows + " </td> "); -->
+            <!-- } -->
+            <!-- document.write(" </tr> "); -->
+            <!-- } -->
+            <!-- document.write(" </table> "); -->
+            <!-- </script> -->
+          </div>
+          <div class="col col-6">
+            <h6 class="text-center">
+              Cubes
+              <button class="btn btn-success" onclick="gen1()">Generate</button>
+            </h6>
+            <div id="inner"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="card1">
       <div class="container shadow shadow-lg p-3 bg-light mb-2">
-        <i class="bi bi-percent d-inline fw-bolder fs-3">
-          Percentage Calculator</i
-        >
+        <h3>Precentage calculator</h3>
         <div id="Precentage cal">
           <div class="mb-3 mt-1">
             <label for="exampleFormControlInput1" class="form-label fw-bold"
@@ -94,9 +131,9 @@
       </div>
     </div>
 
-    <div id="card">
+    <div id="card2">
       <div class="container shadow shadow-lg p-3 mt-5 mb-2 bg-light">
-        <h1>CGPA Calculator</h1>
+        <h3>CGPA Calculator</h3>
 
         <div id="Precentage cal">
           <div class="mb-3 mt-1">
@@ -132,5 +169,578 @@
         </div>
       </div>
     </div>
+
+    <!-------------------------------------Engineering Maths------------------- -->
+    <div id="title">
+      <div class="container-fluid p-3 bg-dark mt-3 mb-2">
+        <h1 class="text-white text-center">Engineering maths</h1>
+      </div>
+    </div>
+
+    <div id="card3">
+      <div class="container shadow shadow-lg p-3 mt-5 mb-2 bg-light">
+        <h3>Matrix Calculator Single (3X3)</h3>
+        <div id="Precentage cal">
+          <div class="mb-3 mt-1">
+            <label for="exampleFormControlInput1" class="form-label fw-bold"
+              >Enter</label
+            >
+            <div class="row">
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="00"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="01"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="02"
+                  placeholder="0"
+                  value="0"
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="10"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number "
+                  class="form-control m-1"
+                  id="11"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="12"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="20"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="21"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="22"
+                  placeholder="0"
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+          <center>
+            <button
+              type="button"
+              class="btn btn-primary m-2"
+              onclick="inv()"
+              text="Inverse"
+            >
+              Inverse
+            </button>
+            <button type="button" class="btn btn-primary m-2" onclick="mul()">
+              Multiply (2x)
+            </button>
+            <button type="button" class="btn btn-primary m-2" onclick="Trans()">
+              Transpose
+            </button>
+            <button type="button" class="btn btn-primary m-2" onclick="raise()">
+              Raise to power two
+            </button>
+            <button type="button" class="btn btn-danger m-2" onclick="reset()">
+              Reset
+            </button>
+          </center>
+          <div class="mb-3 mt-1">
+            <label for="exampleFormControlInput1" class="form-label fw-bold"
+              >Answer</label
+            >
+            <div class="row">
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="a00"
+                  placeholder="0"
+                  value=""
+                  readonly
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="a01"
+                  placeholder="0"
+                  value=""
+                  readonly
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="a02"
+                  placeholder="0"
+                  value="0"
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="a10"
+                  placeholder="0"
+                  value=""
+                  readonly
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control m-1"
+                  id="a11"
+                  placeholder="0"
+                  value=""
+                  readonly
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="a12"
+                  placeholder="0"
+                  value=""
+                  readonly
+                />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="a20"
+                  placeholder="0"
+                  value=""
+                  readonly
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="a21"
+                  placeholder="0"
+                  value=""
+                  readonly
+                />
+              </div>
+              <div class="col m-1">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="a22"
+                  placeholder="0"
+                  value=""
+                  readonly
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="card4">
+      <div class="container shadow shadow-lg p-3 mt-5 mb-2 bg-light">
+        <h3>Matrix Calculator Double (3X3)</h3>
+        <div id="Precentage cal">
+          <div class="mb-3 mt-1">
+            <div class="row">
+              <div class="col col-lg-6 col-md-12 col-sm-12 p-5 border">
+                <center><h6>A</h6></center>
+                <div id="matrix1">
+                  <div class="row">
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="00"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="01"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="02"
+                        placeholder="0"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="10"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number "
+                        class="form-control m-1"
+                        id="11"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="12"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="20"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="21"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="22"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col col-lg-6 col-md-12 col-sm-12 p-5 border">
+                <center><h6>B</h6></center>
+                <div id="matrix1">
+                  <div class="row">
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="00"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="01"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="02"
+                        placeholder="0"
+                        value="0"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="10"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number "
+                        class="form-control m-1"
+                        id="11"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="12"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="20"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="21"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                    <div class="col m-1">
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="22"
+                        placeholder="0"
+                        value=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="operations">
+            <center>
+              <button
+                type="button"
+                class="btn btn-primary m-2"
+                onclick="inv()"
+                text="Inverse"
+              >
+                A - B
+              </button>
+              <button type="button" class="btn btn-primary m-2" onclick="mul()">
+                A + B
+              </button>
+              <button type="button" class="btn btn-primary m-2" onclick="mul()">
+                A X B
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary m-2"
+                onclick="ctop()"
+              >
+                A / B
+              </button>
+              <button
+                type="button"
+                class="btn btn-danger m-2"
+                onclick="reset()"
+              >
+                Reset
+              </button>
+            </center>
+          </div>
+          <div class="mb-3 mt-1">
+            <label for="exampleFormControlInput1" class="form-label fw-bold"
+              >Answer</label
+            >
+            <div id="ans">
+              <div class="row">
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ab00"
+                    placeholder="0"
+                    value=""
+                    readonly
+                  />
+                </div>
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ab01"
+                    placeholder="0"
+                    value=""
+                    readonly
+                  />
+                </div>
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ab02"
+                    placeholder="0"
+                    value="0"
+                    readonly
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ab10"
+                    placeholder="0"
+                    value=""
+                    readonly
+                  />
+                </div>
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control m-1"
+                    id="ab11"
+                    placeholder="0"
+                    value=""
+                    readonly
+                  />
+                </div>
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ab12"
+                    placeholder="0"
+                    value=""
+                    readonly
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ab20"
+                    placeholder="0"
+                    value=""
+                    readonly
+                  />
+                </div>
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ab21"
+                    placeholder="0"
+                    value=""
+                    readonly
+                  />
+                </div>
+                <div class="col m-1">
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="ab22"
+                    placeholder="0"
+                    value=""
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------------Scientific Maths------------------- -->
   </body>
 </html>
