@@ -78,24 +78,89 @@ function Trans(){
     document.getElementById("a22").value=(p22);
 }
 function reset() {
-    document.getElementById("00").value="";
-    document.getElementById("01").value="";
-    document.getElementById("02").value="";
-    document.getElementById("10").value="";
-    document.getElementById("11").value="";
-    document.getElementById("12").value="";
-    document.getElementById("20").value="";
-    document.getElementById("21").value="";
-    document.getElementById("22").value="";
-
-    document.getElementById("a00").value="";
-    document.getElementById("a01").value="";
-    document.getElementById("a02").value="";
-    document.getElementById("a10").value="";
-    document.getElementById("a11").value="";
-    document.getElementById("a12").value="";
-    document.getElementById("a20").value="";
-    document.getElementById("a21").value="";
-    document.getElementById("a22").value="";
+    for (let i = 0; i <3; i++) {
+        for (let j = 0; j < 3; j++) {
+            var c=i.toString()+j.toString();
+            document.getElementById(c).value="";
+            var r="a";
+            r+=c;
+            document.getElementById(r).value="";
+        }
+        
+    }
 }
 
+// Methods for Matrix double 
+function add(){
+    for (let i = 0; i <3; i++) {
+        for (let j = 0; j < 3; j++) {
+            var c=i.toString()+j.toString();
+            var A="A"+c;
+            var B="B"+c;
+            var r="R"+c;
+            let a=document.getElementById(A).value;
+            let b=document.getElementById(B).value;
+            document.getElementById(r).value= parseInt(a)+ parseInt(b);
+        }
+        
+    }
+}
+function sub(){
+    for (let i = 0; i <3; i++) {
+        for (let j = 0; j < 3; j++) {
+            var c=i.toString()+j.toString();
+            var A="A"+c;
+            var B="B"+c;
+            var r="R"+c;
+            let a=document.getElementById(A).value;
+            let b=document.getElementById(B).value;
+            document.getElementById(r).value= parseInt(a)-parseInt(b);
+        }
+        
+    }
+}
+function div1(){
+    for (let i = 0; i <3; i++) {
+        for (let j = 0; j < 3; j++) {
+            var c=i.toString()+j.toString();
+            var A="A"+c;
+            var B="B"+c;
+            var r="R"+c;
+            let a=document.getElementById(A).value;
+            let b=document.getElementById(B).value;
+            document.getElementById(r).value= parseInt(a)/parseInt(b);
+        }
+        
+    }
+}
+function mul1(){
+    for (let i = 0; i <3; i++) {
+        for (let j = 0; j < 3; j++) {
+            var c=i.toString()+j.toString();
+            var A="A"+c;
+            var B="B"+c;
+            var r="R"+c;
+            let a=document.getElementById(A).value;
+            let b=document.getElementById(B).value;
+            document.getElementById(r).value= parseInt(a)*parseInt(b);
+        }
+        
+    }
+}
+function reset1(){
+    for (let i = 0; i <3; i++) {
+        for (let j = 0; j < 3; j++) {
+            var c=i.toString()+j.toString();
+            var A="A";
+            A+=c;
+            document.getElementById(A).value="";
+            var B="B";
+            B+=c;
+            document.getElementById(B).value="";
+            var r="R";
+            r+=c;
+            document.getElementById(r).value="";
+        }
+        
+    }
+}
