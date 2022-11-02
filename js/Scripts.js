@@ -164,3 +164,37 @@ function reset1(){
         
     }
 }
+
+//scientifc Cal
+function sciCal(){
+    var f=document.getElementById("f").value;
+    var c=document.getElementById("c").value;
+    var k=document.getElementById("k").value;
+
+    if(f!=""){ 
+        ftk=(((f-32)*5)/9)+273.15;
+        ftc=((f-32)*5)/9;
+        document.getElementById("c").value=ftc;
+        document.getElementById("k").value=ftk;
+    }
+
+    if(c!=""){
+        ctk=k+273.15;
+        ctf=((f*9)/5)+32;
+        document.getElementById("f").value=ctf;
+        document.getElementById("k").value=ctk;
+    }
+
+    if(k!=""){
+        ktc=k-273.15;
+        ktf=(((k-273.15)*9)/5)+32;
+        document.getElementById("c").value=ktc;
+        document.getElementById("f").value=ktf;
+    }
+   
+}
+function srest() {
+    document.getElementById("f").value="";
+    document.getElementById("c").value="";
+    document.getElementById("k").value="";
+}
