@@ -179,8 +179,8 @@ function sciCal(){
     }
 
     if(c!=""){
-        ctk=k+273.15;
-        ctf=((f*9)/5)+32;
+        ctk=parseInt(c)+273.15;
+        ctf=((c*9)/5)+32;
         document.getElementById("f").value=ctf;
         document.getElementById("k").value=ctk;
     }
